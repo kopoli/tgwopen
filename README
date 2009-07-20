@@ -1,0 +1,34 @@
+updated 20.07.2009
+
+tgwopen is a program to open, create and list TGW-files.
+
+The TGW-files are archive files for a game called Kohan: immortal
+sovereigns. This program is especially intended for the Loki port of the
+game. The main goal is to help in modifying the game, because the Loki port
+does not support these "override"-directories as the windows version
+does. Therefore the TGW-archives must be modified directly.
+
+http://www.timegate.com/kis/
+http://www.lokigames.com/products/kohan/
+
+The source should be mostly C99 and POSIX compatible and it should compile
+on modern Linux:ish systems. 
+
+Compile:
+  sh autogen.sh
+  ./configure && make all
+
+install:
+  make install
+
+run:
+  tgwopen
+
+Examples:
+
+tgwopen list archive.TGW
+Lists the files inside the archive
+
+tgwopen extract archive.TGW --output-dir dir
+extracts the files inside the archive and writes them into the directory dir
+
