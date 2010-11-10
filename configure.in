@@ -1,4 +1,4 @@
-AC_INIT(TGWOpen,0.9.9-b5,kopoliitti@gmail.com)
+AC_INIT(TGWOpen,1.0.0,kopoliitti@gmail.com)
 
 AM_INIT_AUTOMAKE
 

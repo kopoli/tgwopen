@@ -292,6 +292,10 @@ int tgw_file_list(tgw_file *archive, uint8_t verbose)
   return 1;
 }
 
+static int cmpstr(const void *p1,const void *p2)
+{ 
+  return strcmp(* (char * const *) p1, * (char * const *) p2);
+}
 
 int tgw_file_extract(tgw_file *archive, name_list *names, char *basepath)
 {
@@ -300,9 +304,6 @@ int tgw_file_extract(tgw_file *archive, name_list *names, char *basepath)
   char **namelist;
   char fname[FILE_NAME_MAX_LENGTH+1];
   unsigned int count=0;
-
-  int cmpstr(const void *p1,const void *p2)
-    { return strcmp(* (char * const *) p1, * (char * const *) p2); }
 
   if(!archive)
     return 0;
